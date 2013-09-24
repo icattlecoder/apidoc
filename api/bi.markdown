@@ -12,9 +12,6 @@ title: "空间信息统计"
 - [查询各bucket请求数使用详情](#buckets-apicall)
 
 
-```
-HOST:api.qiniu.com
-```
 
 <a name="bucket-info"></a> 
 ## 月度信息
@@ -26,9 +23,11 @@ HOST:api.qiniu.com
 API接口：
 
 ```
-GET /info?bucket=<string>&month=<string> HTTP/1.1
+GET HOST/info?bucket=<string>&month=<string> HTTP/1.1
 Authorization: <Authorization> 
 ```
+
+其中，HOST为`http://api.qiniu.com/stat`,后文不再累述。
 
 参数说明：
 
@@ -60,7 +59,7 @@ Authorization | 令牌，API请求的访问凭证，参考 [授权认证](http:/
 API接口：
 
 ```
-GET http://api.qiniu.com/stat/select/space?bucket=<string>&from=<string>&to=<string>&p=<string> HTTP/1.1
+GET HOST/select/space?bucket=<string>&from=<string>&to=<string>&p=<string> HTTP/1.1
 Authorization: <AccessToken>
 ```
 
@@ -101,7 +100,7 @@ Authorization | 令牌，API请求的访问凭证，参考 [授权认证](http:/
 API接口：
 
 ```
-GET /select/transfer?bucket=<string>&from=<string>&to=<string>&p=<string> HTTP/1.1
+GET HOST/select/transfer?bucket=<string>&from=<string>&to=<string>&p=<string> HTTP/1.1
 Authorization: <AccessToken>
 ```
 
@@ -142,7 +141,7 @@ Authorization | 令牌，API请求的访问凭证，参考 [授权认证](http:/
 API接口：
 
 ```
-GET /select/apicall?bucket=<string>&type=<string>&from=<string>&to=<string>&p=<string> HTTP/1.1
+GET HOST/select/apicall?bucket=<string>&type=<string>&from=<string>&to=<string>&p=<string> HTTP/1.1
 Authorization: <AccessToken>
 ```
 
@@ -184,7 +183,7 @@ Authorization | 令牌，API请求的访问凭证，参考 [授权认证](http:/
 API接口：
 
 ```
-GET /buckets/space?from=<string>&to=<string> HTTP/1.1
+GET HOST/buckets/space?from=<string>&to=<string> HTTP/1.1
 Authorization: <AccessToken>
 ```
 
@@ -224,7 +223,7 @@ Authorization | 令牌，API请求的访问凭证，参考 [授权认证](http:/
 API接口：
 
 ```
-GET /buckets/transfer?from=<string>&to=<string> HTTP/1.1
+GET HOST/buckets/transfer?from=<string>&to=<string> HTTP/1.1
 Authorization | 令牌，API请求的访问凭证，参考 [授权认证](http://docs.qiniu.com/api/v6/rs.html#digest-auth)
 ```
 
@@ -265,7 +264,7 @@ Authorization | 令牌，API请求的访问凭证，参考 [授权认证](http:/
 API接口：
 
 ```
-GET /buckets/apicall?type=<string>&from=<string>&to=<string> HTTP/1.1
+GET HOST/buckets/apicall?type=<string>&from=<string>&to=<string> HTTP/1.1
 Authorization: <AccessToken>
 ```
 
