@@ -16,8 +16,6 @@ title: "空间信息统计"
 <a name="bucket-info"></a> 
 ## 月度信息
 
----
-
 > 摘要：按月份查询空间使用情况
 
 API接口：
@@ -49,10 +47,10 @@ Authorization | 令牌，API请求的访问凭证，参考 [授权认证](http:/
 }
 ```
 
+---
+
 <a name="select-space"></a> 
 ## 查询空间使用详情 
-
----
 
 > 摘要：按照指定的时间粒度查询空间的存储使用量
 
@@ -90,10 +88,10 @@ Authorization | 令牌，API请求的访问凭证，参考 [授权认证](http:/
 }
 ```
 
+---
+
 <a name="select-transfer"></a> 
 ## 查询流量使用详情
-
----
 
 > 摘要：按照指定的时间范围查询空间的流量使用情况
 
@@ -131,10 +129,10 @@ Authorization | 令牌，API请求的访问凭证，参考 [授权认证](http:/
 }
 ```
 
+---
+
 <a name="select-apicall"></a>
 ## 查询请求数使用详情
-
----
 
 > 摘要：按照指定的时间范围查询空间的API请求次数
 
@@ -173,10 +171,10 @@ Authorization | 令牌，API请求的访问凭证，参考 [授权认证](http:/
 }
 ```
 
+---
+
 <a name="buckets-space"></a> 
 ## 查询各bucket空间使用状况
-
----
 
 > 摘要：查询用户在指定的时间内所有空间的存储使用量
 
@@ -213,10 +211,11 @@ Authorization | 令牌，API请求的访问凭证，参考 [授权认证](http:/
 }
 ```
 
+---
+
+
 <a name="buckets-transfer"></a> 
 ## 查询各bucket流量使用详情
-
----
 
 > 摘要：查询用户在指定的时间内所有空间的流量使用量
 
@@ -224,7 +223,7 @@ API接口：
 
 ```
 GET HOST/buckets/transfer?from=<string>&to=<string> HTTP/1.1
-Authorization | 令牌，API请求的访问凭证，参考 [授权认证](http://docs.qiniu.com/api/v6/rs.html#digest-auth)
+Authorization: <AccessToken>
 ```
 
 参数说明：
@@ -254,10 +253,10 @@ Authorization | 令牌，API请求的访问凭证，参考 [授权认证](http:/
 }
 ```
 
+---
+
 <a name="buckets-apicall"></a> 
 ## 查询各bucket请求数使用详情
-
----
 
 > 摘要：查询用户在指定的时间内所有空间的API请求数
 
